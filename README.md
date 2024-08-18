@@ -27,6 +27,7 @@
 
 - Login
    - Pengguna dapat login dengan email dan password.
+   - Integrasi dengan JWT untuk autentikasi.
 
 - Profil
    - Pengguna dapat melihat profilnya sendiri, termasuk melihat management referal dan point yang dimiliki.
