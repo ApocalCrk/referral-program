@@ -1,5 +1,7 @@
 # Referral Program dengan Next.js dan Prisma
 
+## Skema Database ()
+
 ## Setup
 
 1. Clone repository:
@@ -27,4 +29,14 @@
     ```
 
 # Demo Aplikasi
+- Akun 1
+   - email: `test@gmail.com`
+   - password: `test`
+   - kode referral: `1MXPOD`
+
+- Akun 2
+   - email: `test2@gmail.com`
+   - password: `test`
+   - kode referral: `9KFAPY`
+
 [Demo Aplikasi](https://referral-program-gci-msib.vercel.app/)

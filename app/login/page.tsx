@@ -6,10 +6,12 @@ export default function Login() {
     const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
         try {
             const res = await fetch('/api/auth/login', {
                 method: 'POST',
@@ -27,6 +29,7 @@ export default function Login() {
             console.error('Error:', (err as Error).message);
             setError((err as Error).message);
         }
+        setIsSubmitting(false);
     }
 
     return (
@@ -68,7 +71,7 @@ export default function Login() {
                         />
                     </div>
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="submit">
-                        Masuk
+                        {isSubmitting ? 'Memproses...' : 'Masuk'}
                     </button>
                 </form>
                 <p className="text-center text-gray-600 text-xs mt-6">

@@ -8,10 +8,12 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [referralCode, setReferralCode] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
         try {
             const res = await fetch('/api/auth/register', {
                 method: 'POST',
@@ -29,6 +31,7 @@ export default function Register() {
             console.error('Error:', (err as Error).message);
             setError((err as Error).message);
         }
+        setIsSubmitting(false);
     };
 
     return (
@@ -95,7 +98,7 @@ export default function Register() {
                         />
                     </div>
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="submit">
-                        Daftar
+                        {isSubmitting ? 'Memproses...' : 'Daftar'}
                     </button>
                 </form>
                 <p className="text-center text-gray-600 text-xs mt-6">

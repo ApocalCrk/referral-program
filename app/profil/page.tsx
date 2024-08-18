@@ -99,6 +99,8 @@ export default function Profile() {
                                     {new Date(referral.date).toLocaleDateString()}
                                     <br />
                                     Kode Referral: {referral.referrer.referralCode}
+                                    <br /> 
+                                    Kamu mendapatkan 50 point
                                 </li>
                             ))}
                         </ul>
@@ -111,6 +113,8 @@ export default function Profile() {
                                     {referral.referred.name}
                                     <br />
                                     {new Date(referral.date).toLocaleDateString()}
+                                    <br />
+                                    Berhasil mendapatkan 50 point
                                 </li>
                             ))}
                         </ul>
