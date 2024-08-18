@@ -17,7 +17,7 @@
    - date => datetime, default now
 
 ## ERD
-![ERD](https://raw.githubusercontent.com/ApocalCrk/referral-program/main/public/erd-ref.png)
+![ERD](https://raw.githubusercontent.com/ApocalCrk/referral-program/main/public/erd/erd-ref.png)
 
 ## Fungsionalitas
 - Register
